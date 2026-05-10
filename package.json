@@ -1,0 +1,78 @@
+{
+  "name": "@bilkobibitkov/webgpu-gemma",
+  "version": "0.1.0",
+  "description": "Browser-native, WebGPU-accelerated Gemma inference. Tiny SDK + React hook, zero server.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./react": {
+      "types": "./dist/react.d.ts",
+      "import": "./dist/react.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "MODELS.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "pnpm run build"
+  },
+  "dependencies": {
+    "@mlc-ai/web-llm": "^0.2.79"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.3.0",
+    "jsdom": "^25.0.0",
+    "react": "^18.3.1",
+    "tsup": "^8.0.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StanislavBG/webgpu-gemma.git"
+  },
+  "homepage": "https://github.com/StanislavBG/webgpu-gemma#readme",
+  "bugs": {
+    "url": "https://github.com/StanislavBG/webgpu-gemma/issues"
+  },
+  "keywords": [
+    "webgpu",
+    "gemma",
+    "llm",
+    "ai",
+    "browser",
+    "react",
+    "on-device",
+    "mlc",
+    "web-llm"
+  ],
+  "license": "MIT",
+  "author": "Stanislav Bibitkov"
+}
